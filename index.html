@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 20%;
+        height: 50vh;
+        border: 2px solid black;
+    }
+
+    #myArea {
+        width: 95%;
+        margin: 5px;
+        height: 20%;
+        border: 2px solid black;
+        font-size: 45px;
+        text-align: right;
+    }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 60%;
+        margin: 5px;
+        gap: 5px;
+    }
+
+    #equal{
+        width: 100%;
+        height: 100%;
+
+    }
+    
+    .equaldiv{
+        margin: 5px;
+        height: 60px;
+    }
+</style>
+
+    
+
+<body>
+    <div class="container">
+        <input type="text" class="myArea" id="myArea">
+        <div class="buttons">
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="plus">+</button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="minus">-</button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="multiply">*</button>
+            <button id="zero">0</button>
+            <button id="point">.</button>
+            <button id="del">C</button>
+            <button id="divide">/</button>
+        </div>
+        <div class="equaldiv">
+            <button id="equal">=</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

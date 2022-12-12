@@ -58,21 +58,37 @@ zeroEl.addEventListener("click", function () {
 })
 
 plusEl.addEventListener("click", function(){
-    areaEl.value+= "+";
+    if(isNaN(areaEl.value[areaEl.value.length-1])){
+       areaEl.value = areaEl.value.slice(0, -1);
+        areaEl.value+= "+";
+    }else{areaEl.value+= "+"}
+
 })
 
 
 minusEl.addEventListener("click", function(){
-    areaEl.value+= "-";
+    if(isNaN(areaEl.value[areaEl.value.length-1])){
+        areaEl.value = areaEl.value.slice(0, -1);
+         areaEl.value+= "-";
+     }else{areaEl.value+= "-"}
+ 
 })
 
 
 divideEl.addEventListener("click", function(){
-    areaEl.value+= "/";
+    if(isNaN(areaEl.value[areaEl.value.length-1])){
+        areaEl.value = areaEl.value.slice(0, -1);
+         areaEl.value+= "/";
+     }else{areaEl.value+= "/"}
+ 
 })
 
 multiplyEl.addEventListener("click", function(){
-    areaEl.value+= "*";
+    if(isNaN(areaEl.value[areaEl.value.length-1])){
+        areaEl.value = areaEl.value.slice(0, -1);
+         areaEl.value+= "*";
+     }else{areaEl.value+= "*"}
+ 
 })
 
 pointEl.addEventListener("click",function(){
@@ -81,6 +97,7 @@ pointEl.addEventListener("click",function(){
 
 equalEl.addEventListener("click", function () {
     areaEl.value=eval(areaEl.value);
+
 })
 
 delEl.addEventListener("click", function(){

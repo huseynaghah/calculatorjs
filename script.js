@@ -57,49 +57,53 @@ zeroEl.addEventListener("click", function () {
     areaEl.value += 0;
 })
 
-plusEl.addEventListener("click", function(){
-    if(isNaN(areaEl.value[areaEl.value.length-1])){
-       areaEl.value = areaEl.value.slice(0, -1);
-        areaEl.value+= "+";
-    }else{areaEl.value+= "+"}
-
-})
-
-
-minusEl.addEventListener("click", function(){
-    if(isNaN(areaEl.value[areaEl.value.length-1])){
+plusEl.addEventListener("click", function () {
+    if (isNaN(areaEl.value[areaEl.value.length - 1])) {
         areaEl.value = areaEl.value.slice(0, -1);
-         areaEl.value+= "-";
-     }else{areaEl.value+= "-"}
- 
+        areaEl.value += "+";
+    } else { areaEl.value += "+" }
+
 })
 
 
-divideEl.addEventListener("click", function(){
-    if(isNaN(areaEl.value[areaEl.value.length-1])){
+minusEl.addEventListener("click", function () {
+    if (isNaN(areaEl.value[areaEl.value.length - 1])) {
         areaEl.value = areaEl.value.slice(0, -1);
-         areaEl.value+= "/";
-     }else{areaEl.value+= "/"}
- 
+        areaEl.value += "-";
+    } else { areaEl.value += "-" }
+
 })
 
-multiplyEl.addEventListener("click", function(){
-    if(isNaN(areaEl.value[areaEl.value.length-1])){
+
+divideEl.addEventListener("click", function () {
+    if (isNaN(areaEl.value[areaEl.value.length - 1])) {
         areaEl.value = areaEl.value.slice(0, -1);
-         areaEl.value+= "*";
-     }else{areaEl.value+= "*"}
- 
+        areaEl.value += "/";
+    } else { areaEl.value += "/" }
+
 })
 
-pointEl.addEventListener("click",function(){
-    areaEl.value+=".";
+multiplyEl.addEventListener("click", function () {
+    if (isNaN(areaEl.value[areaEl.value.length - 1])) {
+        areaEl.value = areaEl.value.slice(0, -1);
+        areaEl.value += "*";
+    } else { areaEl.value += "*" }
+
+})
+
+pointEl.addEventListener("click", function () {
+    areaEl.value += ".";
 })
 
 equalEl.addEventListener("click", function () {
-    areaEl.value=eval(areaEl.value);
+
+    if (isNaN(areaEl.value[areaEl.value.length - 1])) {
+        areaEl.value = areaEl.value.slice(0, -1);
+        areaEl.value = eval(areaEl.value);
+    } else { areaEl.value = eval(areaEl.value) }
 
 })
 
-delEl.addEventListener("click", function(){
-    areaEl.value="";
+delEl.addEventListener("click", function () {
+    areaEl.value = "";
 })
